@@ -1,0 +1,3 @@
+En revanche, cette liste est vide ! Pour résoudre ce problème, il suffit d'utiliser la méthode addItem(Object obj).
+Sachez que lorsque l'objet affiche les éléments ajoutés, il appelle leur méthode toString(). Dans cet exemple, nous
+avons utilisé des objets String, mais essayez avec un autre objet et vous constaterez le résultat...

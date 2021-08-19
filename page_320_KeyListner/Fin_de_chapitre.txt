@@ -1,0 +1,18 @@
+    Vous vous apercevez que les lettres simples sont désormais interdites à la saisie : mission accomplie ! Cependant, les caractères
+    spéciaux comme « ô », « ï », etc. ne sont pas pris en charge par cette méthode. Par conséquent, leur saisie reste possible.
+        L'objet JComboBox se trouve dans le package javax.swing.
+        Vous pouvez ajouter des éléments dans une liste avec la méthode addItem(Object obj).
+        Vous pouvez aussi instancier une liste avec un tableau de données.
+        L'interface ItemListener permet de gérer les états de vos éléments.
+        Vous pouvez aussi utiliser l'interface ActionListener.
+        La méthode getSelectedItem() retourne une variable de type Object : pensez donc à effectuer un cast, ou à
+        utiliser la méthode toString() si les éléments sont des chaînes de caractères.
+        Les objets JCheckBox, JRadioButton et ButtonGroup sont présents dans le package javax.swing.
+        Vous pouvez déterminer si l'un de ces composants est sélectionné grâce à la méthode isSelected(). Cette méthode
+        retourne true si l'objet est sélectionné, false dans le cas contraire.
+        Vous pouvez restreindre le nombre de choix à un parmi plusieurs réponses en utilisant la classe ButtonGroup.
+        Vous pouvez ajouter des boutons à un groupe de boutons grâce à la méthode add(AbstractButton button).
+        Par défaut, un JTextField accepte tous les types de caractères.
+        Un JFormattedTextField correspond, pour simplifier, à un JTextField plus restrictif.
+        On peut restreindre la saisie dans ces objets en utilisant l'objet MaskFormatter.
+        Afin de contrôler les événements clavier, l'utilisation d'une implémentation de l'interface KeyListener est nécessaire.

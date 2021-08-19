@@ -1,0 +1,8 @@
+Créez un projet vide avec une classe contenant une méthode main() et une classe héritant de JFrame. Cela fait, nous allons
+utiliser notre nouvel objet. Celui-ci peut être instancié avec un String en paramètre qui servira de libellé.
+Nous pouvons également cocher la case par défaut en appelant la méthode setSelected(Boolean bool) à laquelle nous
+passons true. Cet objet possède, comme tous les autres, une multitude de méthodes nous simplifiant la vie ; je vous invite
+aussi à fouiner un peu...
+Nous créerons directement une implémentation de l'interface ActionListener, vous connaissez bien la démarche.
+Contrôlons également que notre objet est coché à l'aide de la méthode isSelected() qui retourne un booléen. Voici un code
+mettant tout cela en œuvre :

@@ -1,0 +1,32 @@
+JOptionPane jop1, jop2, jop3;
+//Boîte du message d'information
+jop1 = new JOptionPane();
+jop1.showMessageDialog(null, "Message informatif", "Information", JOptionPane.INFORMATION_MESSAGE);
+//Boîte du message préventif
+jop2 = new JOptionPane();
+jop2.showMessageDialog(null, "Message préventif", "Attention", JOptionPane.WARNING_MESSAGE);
+//Boîte du message d'erreur
+jop3 = new JOptionPane();
+jop3.showMessageDialog(null, "Message d'erreur", "Erreur",JOptionPane.ERROR_MESSAGE);
+
+
+Ces trois boîtes ne s'affichent pas en même temps, tout simplement parce qu'en Java (mais aussi dans les autres langages), les
+boîtes de dialogue sont dites modales. Cela signifie que lorsqu'une boîte fait son apparition, celle-ci bloque toute interaction
+avec un autre composant, et ceci tant que l'utilisateur n'a pas mis fin au dialogue !
+
+Maintenant, voyons de plus près comment construire un tel objet. Ici, nous avons utilisé la
+méthode showMessageDialog(Component parentComponent, String message, String title, int
+messageType); où :
+
+    Component parentComponent : correspond au composant parent ; ici, il n'y en a aucun, nous mettons donc null.
+    String message : permet de renseigner le message à afficher dans la boîte de dialogue.
+    String title : permet de donner un titre à l'objet.
+    int messageType : permet de savoir s'il s'agit d'un message d'information, de prévention ou d'erreur. Vous avez sans
+    doute remarqué que, mis à part le texte et le titre, seul ce champ variait entre nos trois objets !
+
+
+Il existe deux autres méthodes showMessageDialog() pour cet objet : une qui prend deux paramètres en moins (le titre et le
+type de message), et une qui prend un paramètre en plus (l'icône à utiliser).
+
+Je pense qu'il est inutile de détailler la méthode avec les paramètres en moins, mais voici des exemples de boîtes avec des icônes
+définies par nos soins.

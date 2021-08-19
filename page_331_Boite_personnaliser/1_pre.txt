@@ -1,0 +1,5 @@
+Je me doute que vous êtes impatients de faire vos propres boîtes de dialogue. Comme il est vrai que dans certains cas, vous en
+aurez besoin, allons-y gaiement ! Je vais vous révéler un secret bien gardé : les boîtes de dialogue héritent de la classe
+JDialog. Vous avez donc deviné que nous allons créer une classe dérivée de cette dernière.
+Commençons par créer un nouveau projet. Créez une nouvelle classe dans Eclipse, appelons-la ZDialog, faites-la hériter de la
+classe citée précédemment, et mettez-y le code suivant :

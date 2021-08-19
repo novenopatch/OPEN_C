@@ -1,0 +1,15 @@
+Vous vous rappelez que j'ai mentionné qu'une MenuBar fait partie de la composition de l'objet JFrame. Le moment est venu
+pour vous d'utiliser un composant de ce genre. Néanmoins, celui-ci appartient au package java.awt. Dans ce chapitre nous
+utiliserons son homologue, l'objet JMenuBar, issu dans le package javax.swing. Pour travailler avec des menus, nous
+aurons besoin :
+de l'objet JMenu, le titre principal d'un point de menu (Fichier, Édition...) ;
+d'objets JMenuItem, les éléments composant nos menus.
+Afin de permettre des interactions avec nos futurs menus, nous allons devoir implémenter l'interface ActionListener que
+vous connaissez déjà bien. Ces implémentations serviront à écouter les objets JMenuItem : ce sont ces objets qui
+déclencheront l'une ou l'autre opération. Les JMenu, eux, se comportent automatiquement : si on clique sur un titre de menu,
+celui-ci se déroule tout seul et, dans le cas où nous avons un tel objet présent dans un autre JMenu, une autre liste se déroulera
+toute seule !
+Je vous propose d'enlever tous les composants (boutons, combos, etc.) de notre animation et de gérer tout cela par le biais d'un
+menu.
+Avant de nous lancer dans cette tâche, voici une application de tout cela, histoire de vous familiariser avec les concepts et leur
+syntaxe.

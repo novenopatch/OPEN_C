@@ -1,0 +1,17 @@
+    Vous pouvez maintenant vous rendre compte de l'ordre dans lequel les événements du clavier sont gérés : en premier, lorsqu'on
+    presse la touche, en deuxième, lorsqu'elle est tapée, et enfin, lorsqu'elle est relâchée.
+    Dans le cas qui nous intéresse, nous souhaitons que lorsque l'utilisateur saisit un caractère interdit, celui-ci soit
+    automatiquement retiré de la zone de saisie. Pour cela, nous procéderons à un traitement spécifique dans la méthode
+    keyReleased(KeyEvent event).
+    Si vous avez effectué beaucoup de tests de touches, vous avez dû remarquer que les codes des touches correspondant aux
+    chiffres du pavé numérique sont compris entre 96 et 105.
+    À partir de là, c'est simple : il nous suffit de supprimer le caractère tapé de la zone de saisie si son code n'est pas compris dans
+    cet intervalle. Toutefois, un problème se pose avec cette méthode : ceux qui possèdent un ordinateur portable sans pavé
+    numérique ne pourront rien saisir alors qu'il est possible d'obtenir des chiffres en appuyant sur MAJ + &, é, ', ( ou -.
+    Ce souci nous amène à opter pour une autre solution : nous créerons une méthode dont le type de retour sera un booléen nous
+    indiquant si la saisie est numérique ou non. Comment ? Tout simplement en exécutant un Integer.parseInt(value), le
+    tout enveloppé dans un try{...}catch(NumberFormatException ex){}. Si nous essayons de convertir un caractère
+    « a » en entier, l'exception sera levée et nous retournerons alors false (true dans le cas contraire).
+   
+        La méthode parseInt() prend un String en paramètre. La méthode getKeyChar(), elle, renvoie un char. Il
+        faudra donc penser à faire la conversion.

@@ -1,0 +1,6 @@
+Voici maintenant une variante de ce que vous venez de voir : nous allons utiliser ici la méthode showOptionDialog(). Celle-
+ci fonctionne à peu près comme la méthode précédente, sauf qu'elle prend un paramètre supplémentaire et que le type de retour
+n'est pas un objet mais un entier.
+Ce type de boîte propose un choix de boutons correspondant aux éléments passés en paramètres (tableau de String) au lieu
+d'une combo ; elle prend aussi une valeur par défaut, mais retourne l'indice de l'élément dans la liste au lieu de l'élément lui-même.
+Je pense que vous vous y connaissez assez pour comprendre le code suivant :

@@ -1,0 +1,13 @@
+Voyons ce qu'il se passe ici :
+nous initialisons notre objet JOptionPane : rien d'étonnant ;
+en revanche, plutôt que d'afficher directement la boîte, nous affectons le résultat que renvoie la méthode
+showConfirmDialog() à une variable de type int ;
+nous nous servons de cette variable afin de savoir quel bouton a été cliqué (oui ou non).
+En fait, lorsque vous cliquez sur l'un des deux boutons présents dans cette boîte, vous pouvez affecter une valeur de type int :
+    correspondant à l'entier JOptionPane.OK_OPTION, qui vaut 0 (JOptionPane.YES_OPTION a la même valeur);
+    correspondant à l'entier JOptionPane.NO_OPTION, qui vaut 1 ;
+    correspondant à l'entier JOptionPane.CANCEL_OPTION pour la boîte apparaissant lors du clic sur « Stop », qui
+    vaut 2 ;
+    correspondant à l'entier JOptionPane.CLOSED_OPTION pour la même boîte que ci-dessus et qui vaut -1.
+    En effectuant un test sur la valeur de notre entier, nous pouvons en déduire le bouton sur lequel on a cliqué et agir en
+    conséquence ! La figure suivante représente deux copies d'écran du résultat obtenu.

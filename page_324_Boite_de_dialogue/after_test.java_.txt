@@ -1,0 +1,17 @@
+Ces images ont été trouvées sur Google puis rangées dans un dossier « images » à la racine du projet Eclipse. Je vous invite à
+télécharger vos propres images et à faire vos tests. Vous remarquerez aussi l'emploi de l'objet ImageIcon, qui lit le fichier image
+à l'emplacement spécifié dans son constructeur. La figure suivante représente le résultat obtenu.
+
+Images personnalisées dans des boîtes de dialogue
+Ce type de boîte est très utile pour signaler à l'utilisateur qu'une opération s'est terminée ou qu'une erreur est survenue.
+L'exemple le plus simple qui me vient en tête est le cas d'une division par zéro : on peut utiliser une boîte de dialogue dans le bloc
+catch.
+    Voici les types de boîtes que vous pouvez afficher (ces types restent valables pour tout ce qui suit) :
+    JOptionPane.ERROR_MESSAGE
+    JOptionPane.INFORMATION_MESSAGE
+    JOptionPane.PLAIN_MESSAGE
+    JOptionPane.QUESTION_MESSAGE
+    JOptionPane.WARNING_MESSAGE
+
+    Je pense que vous voyez désormais l'utilité de telles boîtes de dialogue. Nous allons donc poursuivre avec les boîtes de
+confirmation.

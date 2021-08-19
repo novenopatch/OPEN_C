@@ -1,0 +1,10 @@
+Un objet plus restrictif : le JFormattedTextField
+Grâce à ce type d'objet, nous pourrons éviter beaucoup de contrôles et de casts sur le contenu de nos zones de texte. Si vous
+avez essayé de récupérer le contenu du JTextField utilisé ci-dessus (lors du clic sur un bouton, par exemple), vous avez dû
+vous rendre compte que le texte qu'il contenait importait peu, mais un jour, vous aurez sans doute besoin d'une zone de texte qui
+n'accepte qu'un certain type de données. Avec l'objet JFormattedTextField, nous nous en approchons (mais vous verrez
+que vous pourrez faire encore mieux). Cet objet retourne une valeur uniquement si celle-ci correspond à ce que vous avez
+autorisé. Je m'explique : si vous voulez que votre zone de texte contienne par exemple des entiers et rien d'autre, c'est possible !
+En revanche, ce contrôle ne s'effectue que lorsque vous quittez le champ en question. Vous pouvez ainsi saisir des lettres dans
+un objet n'acceptant que des entiers, mais la méthode getText() ne renverra alors rien, car le contenu sera effacé, les
+données ne correspondent pas aux attentes de l'objet. Voici un code et deux exemples, ainsi que leur rendu (figure suivante).

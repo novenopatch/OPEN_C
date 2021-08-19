@@ -1,0 +1,9 @@
+Comme leur nom l'indique, ces dernières permettent de valider, d'invalider ou d'annuler une décision. Nous utiliserons toujours
+l'objet JOptionPane, mais ce sera cette fois avec la méthode showConfirmDialog(), une méthode qui retourne un entier
+correspondant à l'option que vous aurez choisie dans cette boîte :
+    Yes ;
+    No ;
+    Cancel.
+Comme exemple, nous pouvons prendre notre animation dans sa version la plus récente. Nous pourrions utiliser une boîte de
+confirmation lorsque nous cliquons sur l'un des boutons contrôlant l'animation (Go ou Stop).
+Voici les modifications de notre classe Fenetre :

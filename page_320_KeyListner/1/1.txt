@@ -1,0 +1,29 @@
+Nous connaissons déjà :
+    l'interface MouseListener qui interagit avec la souris ;
+    l'interface ActionListener qui interagit lors d'un clic sur un composant ;
+    l'interface ItemListener qui écoute les événements sur une liste déroulante.
+Voici à présent l'interface KeyListener. Comme l'indique le titre, elle nous permet d'intercepter les événements clavier lorsque
+l'on :
+    presse une touche ;
+    relâche une touche ;
+    tape sur une touche.
+Vous savez ce qu'il vous reste à faire : créer une implémentation de cette interface dans votre projet. Créez une classe interne qui
+l'implémente et utilisez l'astuce d'Eclipse pour générer les méthodes nécessaires.
+Vous constatez qu'il y en a trois :
+    keyPressed(KeyEventevent), appelée lorsqu'on presse une touche ;
+    keyReleased(KeyEventevent), appelée lorsqu'on relâche une touche (c'est à ce moment que le composant se voit  affecter la valeur de la touche) ;
+    keyTyped(KeyEventevent), appelée entre les deux méthodes citées ci-dessus.
+
+Comme vous vous en doutez, l'objet KeyEvent nous permettra d'obtenir des informations sur les touches qui ont été utilisées.
+Parmi celles-ci, nous utiliserons :
+    getKeyCode() : retourne le code de la touche ;
+    getKeyChar() : retourne le caractère correspondant à la touche.
+Nous pouvons aussi déterminer lorsque certaines touches de contrôle ont été utilisées (SHIFT, CTRL...), connaître le
+composant à l'origine de l'événement, etc. Nous n'en parlerons pas ici, mais ce genre d'information est facile à trouver sur
+Internet.
+Pour des raisons de simplicité, nous n'utiliserons pas un JFormattedTextField mais un JTextField sans
+MaskFormatter. Ainsi, nous n'aurons pas à nous préoccuper des tirets de notre champ.
+Pour commencer, nous allons examiner l'ordre dans lequel se déroulent les événements clavier ; il est vrai que ceux-ci se
+produisent si rapidement que nous n'avons pas le temps de les voir défiler. J'ai donc ajouté une pause à la fin de chaque méthode
+de l'implémentation afin de mieux observer l'ordre d'exécution.
+Voici le code source que nous allons utiliser (il est presque identique aux précédents, rassurez-vous) :

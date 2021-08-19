@@ -1,0 +1,126 @@
+//tableau a une dimensssion
+
+<type><nom> [] = {<donnees>,<donnes>}
+int tableauEntier[] = {0,1,2,3,4,5,6,7,8,9};
+double tableauDouble[] = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0};
+char tableauCaractere[] = {'a','b','c','d','e','f','g'};
+String tableauChaine[] = {"chaine1", "chaine2", "chaine3" ,
+"chaine4"};
+//tableau vide
+int tableauEntier[] = new int[6];
+//Ou encore
+int[] tableauEntier2 = new int[6];int tableauEntier[] = new int[6];
+//Ou encore
+int[] tableauEntier2 = new int[6];
+//tableau multidimenssionel
+int premiersNombres[][] = { {0,2,4,6,8},{1,3,5,7,9} };
+
+char tableauCaractere[] = {'a','b','c','d','e','f','g'};
+for(int i = 0; i < tableauCaractere.length; i++)
+{
+System.out.println("À l'emplacement " + i +" du tableau nous avons = " + tableauCaractere[i]);
+}
+
+//code incluant une saisie pour rechercher dans un tableau
+
+int i = 0;
+char reponse = ' ',carac = ' ';
+Scanner sc = new Scanner(System.in);
+do {//Boucle principale
+do {//On répète cette boucle tant que l'utilisateur n'a pas
+rentré une lettre figurant dans le tableau
+i = 0;
+System.out.println("Rentrez une lettre en minuscule, SVP ");
+carac = sc.nextLine().charAt(0);
+//Boucle de recherche dans le tableau
+while(i < tableauCaractere.length && carac !=
+tableauCaractere[i])
+i++;
+//Si i < 7 c'est que la boucle n'a pas dépassé le nombre de
+cases du tableau
+if (i < tableauCaractere.length)
+System.out.println(" La lettre " +carac+ " se trouve bien dans
+le tableau !");
+else //Sinon
+System.out.println(" La lettre " +carac+ " ne se trouve pas
+dans le tableau !");
+}while(i >= tableauCaractere.length);
+//Tant que la lettre de l'utilisateur ne correspond pas à une
+lettre du tableau
+do{
+System.out.println("Voulez-vous essayer à nouveau ? (O/N)");
+reponse = sc.nextLine().charAt(0);
+}while(reponse != 'N' && reponse != 'O');
+}while (reponse == 'O');
+System.out.println("Au revoir !");
+
+
+//explication
+
+Explications sur la recherche
+Dans notre while, il y a deux conditions.
+La première correspond au compteur : tant que celui-ci est inférieur ou égal au nombre d'éléments du tableau, on l'incrémente
+pour regarder la valeur suivante. Nous passons ainsi en revue tout ce qui se trouve dans notre tableau. Si nous n'avions mis que
+cette condition, la boucle n'aurait fait que parcourir le tableau, sans voir si le caractère saisi correspond bien à un caractère de
+notre tableau, d'où la deuxième condition.
+La deuxième correspond à la comparaison entre le caractère saisi et la recherche dans le tableau. Grâce à elle, si le caractère saisi
+se trouve dans le tableau, la boucle prend fin, et donc i a une valeur inférieure à 7.
+À ce stade, notre recherche est terminée. Après cela, les conditions coulent de source ! Si nous avons trouvé une
+correspondance entre le caractère saisi et notre tableau, i prendra une valeur inférieure à 7 (vu qu'il y a 7 éléments dans notre
+tableau, l'indice maximum étant 7-1, soit 6). Dans ce cas, nous affichons un message confirmant la présence de l’élément
+recherché. Dans le cas contraire, c'est l'instruction du else qui s'exécutera.
+
+Vous avez dû remarquer la présence d'un i = 0; dans une boucle. Ceci est primordial, sinon, lorsque vous
+reviendrez au début de celle-ci, i ne vaudra plus 0, mais la dernière valeur à laquelle il aura été affecté après les
+différentes incrémentations. Si vous faites une nouvelle recherche, vous commencerez par l'indice contenu dans i ; ce
+que vous ne voulez pas, puisque le but est de parcourir l'intégralité du tableau, donc depuis l’indice 0.
+
+//lire dans un tableau a deux dim
+int premiersNombres[][] = { {0,2,4,6,8},{1,3,5,7,9} }, i = 0, j = 0;
+while (i < 2)
+{
+j = 0;
+while(j < 5)
+{
+System.out.print(premiersNombres[i][j]);
+j++;
+}
+System.out.println("");
+i++;
+}
+
+Le même résultat avec une boucle for
+
+int premiersNombres[][] = { {0,2,4,6,8},{1,3,5,7,9} };
+for(int i = 0; i < 2; i++)
+{
+for(int j = 0; j < 5; j++)
+{
+System.out.print(premiersNombres[i][j]);
+}
+System.out.println("");
+}
+
+
+String tab[] = {"toto", "titi", "tutu", "tete", "tata"};
+for(String str : tab)
+System.out.println(str);
+
+
+//pour un tableau a deux dimensssion
+String tab[][]={{"toto", "titi", "tutu", "tete", "tata"}, {"1", "2",
+"3", "4"}};
+int i = 0, j = 0;
+for(String sousTab[] : tab)
+{
+i = 0;
+for(String str : sousTab)
+{
+System.out.println("La valeur de la nouvelle boucle est : " +
+str);
+System.out.println("La valeur du tableau à l'indice
+["+j+"]["+i+"] est : " + tab[j][i]);
+i++;
+}
+j++;
+}

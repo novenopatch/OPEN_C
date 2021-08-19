@@ -1,0 +1,14 @@
+Je pense que vous avez deviné le rôle des paramètres du constructeur, mais je vais tout de même les expliciter :
+JFrame Parent correspond à l'objet parent ;
+    String title correspond au titre de notre boîte ;
+    boolean modal correspond à la modalité ; 
+    true : boîte modale, false : boîte non modale.
+
+Rien de compliqué... Il est donc temps d'ajouter des composants à notre objet. Par contre, vous conviendrez que si nous
+prenons la peine de construire un tel composant, nous attendons plus qu'une simple réponse à une question ouverte (oui/non),
+une chaîne de caractères ou encore un choix dans une liste... Nous en voulons bien plus ! Plusieurs saisies, avec plusieurs listes
+en même temps !
+
+Vous avez vu que nous devrons récupérer les informations choisies dans certains cas, mais pas dans tous : nous allons donc
+devoir déterminer ces différents cas, ainsi que les choses à faire.
+

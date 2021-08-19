@@ -1,0 +1,31 @@
+import javax.swing.JFrame;
+
+/*
+    pour positionner la fenetre ailleurs on a la methode :  .setLocation(int x, int y)
+    pour empecher le redimensionnement de la fenetre  :     .setResizable(boolean b): false ou true
+    pour garder la fenetre au premier plan  :               .setAlwaysOnTop(boolean b)
+    pour retirer les contours et les boutons de controle :  .setUndecorated(boolean b)
+
+*/
+
+public class Main {
+    public static void main(String[] args){
+        JFrame fenetre = new JFrame();
+        
+        fenetre.setTitle("Ma premiere fenetre java trop cool");//pour definir un titre a la frenetre
+
+        //Définit sa taille : 400 pixels de large et 100 pixels de haut
+        fenetre.setSize(400,100);//pour definir sa taille
+
+        fenetre.setLocationRelativeTo(null);//pour qu'il se centre
+
+        fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//pour qu'il se ferme au clique de la croix fermer
+
+        fenetre.setVisible(true);//bah pour le rendre visible
+
+
+        
+    }
+
+    
+}

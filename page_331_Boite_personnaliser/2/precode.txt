@@ -1,0 +1,8 @@
+Partons du fait que notre boîte comprendra un bouton OK et un bouton Annuler : dans le cas où l'utilisateur clique sur OK, on
+récupère les informations, si l'utilisateur clique sur Annuler, on ne récupère rien. Et il faudra aussi tenir compte de la modalité
+de notre boîte : la méthode setVisible(false); met fin au dialogue ! Ceci signifie également que le dialogue s'entame au
+moment où l'instruction setVisible(true); est exécutée. C'est pourquoi nous allons sortir cette instruction du
+constructeur de l'objet et la mettre dans une méthode à part.
+
+Maintenant, il faut que l'on puisse indiquer à notre boîte de renvoyer les informations ou non. C'est pour cela que nous allons
+utiliser un booléen - appelons-le sendData - initialisé à false, mais qui passera à true si on clique sur OK.

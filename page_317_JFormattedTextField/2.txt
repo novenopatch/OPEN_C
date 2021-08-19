@@ -1,0 +1,63 @@
+Vous voyez qu'en plus, notre objet met automatiquement la saisie en forme lorsqu'elle est valide : il espace les nombres tous les
+trois chiffres afin d'en faciliter la lecture.
+Voici ce que vous pouvez utiliser dans ce genre de champ :
+    NumberFormat avec :
+    getIntegerInstance()
+    getPercentInstance()
+    getNumberInstance()
+    DateFormat avec
+    getTimeInstance()
+    getDateInstance()
+    MessageFormat
+
+Sans entrer dans les détails, vous pouvez aussi utiliser un objet MaskFormatter qui permet d'attribuer un format de longueur
+fixe à votre zone de texte. C'est très pratique lorsque vous souhaitez introduire un numéro de téléphone, un numéro de sécurité
+sociale etc.
+Vous devez définir ce format avec un paramètre lors de l'instanciation du masque à l'aide de métacaractères. Ceux-ci indiquent à
+votre objet MaskFormatter ce que le contenu de votre zone de texte contiendra. Voici la liste de ces métacaractères :
+    # : indique un chiffre ;
+    ' : indique un caractère d'échappement ;
+    U : indique une lettre (les minuscules sont automatiquement changées en majuscules) ;
+    L : indique une lettre (les majuscules sont automatiquement changées en minuscules) ;
+    A : indique un chiffre ou une lettre ;
+    ? : indique une lettre ;
+    * : indique que tous les caractères sont acceptés ;
+    H : indique que tous les caractères hexadécimaux sont acceptés (0 à 9, a à f et A à F).
+
+L'instanciation d'un tel objet peut lever une ParseException. Vous devez donc l'entourer d'un bloc
+try{...}catch(ParseException e){...}.
+
+Voici à quoi ressemblerait un format téléphonique :
+    Code : Java
+        try{
+            MaskFormatter tel = new MaskFormatter("## ## ## ## ##");
+            //Ou encore
+            MaskFormatter tel2 = new MaskFormatter("##-##-##-##-##");
+            //Vous pouvez ensuite le passer à votre zone de texte
+             JFormattedTextField jtf = new JFormattedTextField(tel2);
+        }
+        catch(ParseException e){e.printStackTrace();}
+
+Vous voyez qu'il n'y a là rien de compliqué. Je vous invite à essayer cela dans le code précédent, vous constaterez qu'avec le
+métacaractère utilisé dans notre objet MaskFormatter, nous sommes obligés de saisir des chiffres. La figure suivante montre
+le résultat après avoir cliqué sur le bouton.
+
+
+Je ne sais pas pour le numéro de téléphone américain, mais le numéro français est loin d'être un numéro de téléphone valide.
+Nous voici confrontés à un problème qui nous hantera tant que nous programmerons : l'intégrité de nos données !
+Comme le montre l'exemple précédent, nous pouvons suggérer à l'utilisateur ce qu'il doit renseigner comme données dans les
+champs, mais nous ne devons pas lui faire aveuglément confiance ! C'est simple : on part du principe de ne jamais faire confiance
+à l'utilisateur.
+Nous sommes donc obligés d'effectuer une multitude de contrôles supplémentaires. Pour ce faire, nous pouvons :
+    tester chaque élément du numéro ;
+    tester le numéro en entier ;
+    dans le cas où nous n'utilisons pas de MaskFormatter, vérifier en plus que les saisies sont numériques ;
+    utiliser une expression régulière ;
+    empêcher la saisie d'un type de caractères ;
+etc.
+
+En gros, nous devons vérifier l'intégrité de nos données (dans le cas qui nous intéresse, l'intégrité de nos chaînes de caractères)
+pendant ou après la saisie. Je ne vous cache pas que cela prendra une grande part de votre temps lorsque vous coderez vos
+propres logiciels, mais c'est le métier qui veut ça.
+Avant de terminer ce chapitre (assez conséquent, je l'avoue), je vous propose de voir comment nous pouvons récupérer les
+événements du clavier. Nous avons appris à interagir avec la souris, mais pas avec le clavier.

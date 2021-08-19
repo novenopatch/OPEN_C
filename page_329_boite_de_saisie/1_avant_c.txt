@@ -1,0 +1,5 @@
+Je suis sûr que vous avez deviné à quoi peuvent servir ces boîtes. Oui, tout à fait, nous allons pouvoir y saisir du texte ! Et mieux
+encore : nous pourrons même obtenir une boîte de dialogue qui propose des choix dans une liste déroulante. Vous savez déjà
+que nous allons utiliser l'objet JOptionPane, et les plus curieux d'entre vous ont sûrement dû jeter un œil aux autres méthodes
+proposées par cet objet... Ici, nous allons utiliser la méthode showInputDialog(Component parent, String
+message, String title, int messageType), qui retourne une chaîne de caractères.
